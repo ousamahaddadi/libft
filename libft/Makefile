@@ -6,7 +6,7 @@
 #    By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/12 11:03:30 by ohaddadi          #+#    #+#              #
-#    Updated: 2022/11/05 16:07:21 by ohaddadi         ###   ########.fr        #
+#    Updated: 2022/11/05 18:11:39 by ohaddadi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,20 @@ SRCS = ft_isalpha.c								\
 		ft_tolower.c							\
 		ft_strlen.c								\
 		ft_strlcpy.c							\
+		ft_strlcat.c							\
 		ft_memset.c 							\
 		ft_bzero.c								\
 		ft_memcpy.c								\
 		ft_memmove.c							\
 		ft_strchr.c								\
-		ft_strrchr.c								\
+		ft_strrchr.c							\
+		ft_strncmp.c							\
+		ft_strnstr.c							\
+		ft_atoi.c							\
+		ft_calloc.c							\
+		ft_memchr.c							\
+		ft_memcmp.c							\
+		ft_strdup.c							\
 
 NAME = libft.a
 

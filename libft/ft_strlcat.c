@@ -6,7 +6,7 @@
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 13:30:55 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 14:26:32 by ohaddadi         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:08:57 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	j = 0;
-	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	if (dstsize == 0)
 		return (src_len);
+	dst_len = ft_strlen(dst);
 	if (dstsize <= dst_len)
 		return (src_len + dstsize);
 	while (dst[i] != '\0')
@@ -39,12 +39,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	return (dst_len + src_len);
 }
 
-int main ()
-{
-	//char des[10]="hello";
-	//char des2[10]="hello";
-	char src[10]="world";
-	char src2[10]="world";
-	printf("%zu\n",strlcat(NULL,src2,0));
-	printf("%zu\n",ft_strlcat(NULL,src,0));
-}
