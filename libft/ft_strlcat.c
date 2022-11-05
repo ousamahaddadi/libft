@@ -5,49 +5,46 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/01 09:22:36 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/01 11:06:02 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/05 13:30:55 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/05 14:26:32 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, const char *src, size_t dst_size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned int	srclen;
-	unsigned int	dstlen;
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
+	size_t	dst_len;
+	size_t	src_len;
 
-	i = ft_strlen(dest);
+	i = 0;
 	j = 0;
-	srclen = ft_strlen(src);
-	dstlen = ft_strlen(dest);
-	if (dest == NULL)
-		return (0);
-	if (dst_size == 0)
-		return (srclen);
-	if (dst_size < dstlen)
-		return (srclen + dst_size);
-	if (dst_size > 0)
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (dstsize == 0)
+		return (src_len);
+	if (dstsize <= dst_len)
+		return (src_len + dstsize);
+	while (dst[i] != '\0')
+		i++;
+	while (src[j] != '\0' && i < dstsize - 1)
 	{
-		while (src[j] != '\0' && i < (dst_size - 1))
-		{
-			dest[i++] = src[j++];
-		}
+		dst[i] = src[j];
+		i++;
+		j++;
 	}
-	dest[i] = '\0';
-	return (srclen + dstlen);
+	dst[i] = '\0';
+	return (dst_len + src_len);
 }
 
-int	main(void)
+int main ()
 {
-	char dest[10]="";
-	char src[10]="ggg";
-	printf ("%zu\n", ft_strlcat(NULL, src, 0));
-	printf("%s\n",dest);
-	char dest2[10]="";
-	char src2[10]="ggg";
-	printf ("%zu\n", strlcat(NULL, src2, 0));
-	printf("%s",dest2);
+	//char des[10]="hello";
+	//char des2[10]="hello";
+	char src[10]="world";
+	char src2[10]="world";
+	printf("%zu\n",strlcat(NULL,src2,0));
+	printf("%zu\n",ft_strlcat(NULL,src,0));
 }
