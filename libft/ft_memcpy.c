@@ -5,25 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 20:11:32 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:14 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:37:50 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:37:51 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	unsigned char	*a;
+	unsigned char	*b;
+	size_t			i;
 
 	i = 0;
-	if ((dst != NULL || src != NULL))
-	{
-		while (n-- > 0)
-		{
-			*((unsigned char *)dst + i) = *((unsigned char *)src + i);
-			i++;
-		}
-	}
-	return (dst);
+	a = (unsigned char *)src;
+	b = (unsigned char *)dest;
+	if (a != NULL || b != NULL)
+		while (0 < n--)
+			*b++ = *a++;
+	return (dest);
 }

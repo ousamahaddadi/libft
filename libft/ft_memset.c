@@ -5,23 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 17:44:47 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:30 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:37:59 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:38:01 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-//void	*ft_memset(void *str, int c, size_t len)
-void	*ft_memset(char *str, int c, size_t len)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	int	i;
+	int				i;
+	unsigned char	*p;
 
+	p = str;
 	i = 0;
-	while (len > 0)
+	while (n--)
 	{
-		((unsigned char *) str)[i++] = (unsigned char ) c;
-		len--;
+		p[i] = (unsigned char)c;
+		i++;
 	}
 	return (str);
 }

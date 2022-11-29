@@ -5,15 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 13:23:33 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:09 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:36:40 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:36:41 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int x)
+
+
+int	ft_isprint(int i)
 {
-	if (x >= 32 && x < 127)
+	if (i >= 32 && i < 127)
 		return (1);
-	else
-		return (0);
+	return (0);
 }

@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 13:43:54 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:51 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:39:37 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:39:38 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int x)
+
+int	ft_tolower(int c)
 {
-	if (x >= 'A' && x <= 'Z')
-		return (x + 32);
-	else
-		return (x);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }

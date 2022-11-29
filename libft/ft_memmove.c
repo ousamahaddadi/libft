@@ -5,37 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 21:47:30 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:26 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:37:54 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:37:55 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memmove(void *dst, void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	int				i;
-	unsigned char	*char_dst;
-	unsigned char	*char_src;
+	char	*s;
+	char	*d;
+	size_t	i;
 
+	s = (char *)src;
+	d = (char *)dst;
 	i = 0;
-	char_dst = (unsigned char *)dst;
-	char_src = (unsigned char *)src;
-	if (char_dst == NULL && char_src == NULL)
+	if (!s && !d)
 		return (NULL);
-	else if (char_dst > char_src)
-	{
-		while (n-- > 0)
-		{
-			*(char_dst + n) = *(char_src + n);
-		}
-	}
+	if (d > s)
+		while (len-- > 0)
+			d[len] = s[len];
 	else
 	{
-		while (n-- > 0)
+		while (i < len)
 		{
-			*(char_dst + i) = *(char_src + i);
+			d[i] = s[i];
 			i++;
 		}
 	}

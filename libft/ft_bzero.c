@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/16 19:13:09 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:23:44 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:36:17 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:45:26 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *str, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	while (n > 0)
-	{
-		*(unsigned char *)str++ = '\0';
-		n--;
-	}
+	char	*dest;
+
+	dest = (char *)s;
+	while (n-- > 0)
+		*dest++ = 0;
 }

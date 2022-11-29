@@ -5,15 +5,16 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 11:38:12 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:23:56 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:36:35 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:36:36 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int x)
+
+
+int	ft_isdigit(int i)
 {
-	if (x >= '0' && x <= '9')
+	if (i >= '0' && i <= '9')
 		return (1);
-	else
-		return (0);
+	return (0);
 }

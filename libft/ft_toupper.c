@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 13:33:34 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:54 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:39:41 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:39:43 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int x)
+
+int	ft_toupper(int c)
 {
-	if (x >= 'a' && x <= 'z')
-		return (x - 32);
-	else
-		return (x);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

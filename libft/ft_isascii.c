@@ -5,15 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 12:28:27 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:23:53 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:36:31 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:36:32 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int x)
+
+int	ft_isascii(int i)
 {
-	if (x >= 0 && x <= 127)
+	if (i >= 0 && i <= 127)
 		return (1);
-	else
-		return (0);
+	return (0);
 }

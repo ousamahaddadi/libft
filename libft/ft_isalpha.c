@@ -2,18 +2,19 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
-/*                                                   +:+ +:+         +:+     */
+/*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 09:48:47 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/10/12 11:22:24 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:36:26 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:36:27 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
- 
-int	ft_isalpha(int x)
+
+
+
+int	ft_isalpha(int i)
 {
-	if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z'))
+	if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z'))
 		return (1);
-	else
-		return (0);
+	return (0);
 }

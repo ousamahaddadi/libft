@@ -5,27 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/05 15:24:31 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:49 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:39:21 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:39:23 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int slen;
+	int		i;
 
-	slen = (ft_strlen(s));
-	if (*(s) == (char) c)
-		return ((char *)s);
-	while (slen > 0)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (*(s + slen) == (char )c)
-			return ((char *)(s + slen));
-		slen--;
+		if (s[i] == (char)c)
+			return ((char *)s + i);
+		i--;
 	}
-	if (c == '\0')
-		return ((char *)(s +slen));
 	return (NULL);
 }

@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/05 17:21:18 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:24:46 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:39:14 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:39:16 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "libft.h"
 
@@ -19,7 +20,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	n_len;
 
 	i = 0;
-	if (haystack == NULL && len == 0)
+	if ((!needle || !haystack) && len == 0)
 		return (NULL);
 	n_len = ft_strlen(needle);
 	if (n_len == 0 || haystack == needle)

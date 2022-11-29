@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ohaddadi <ousama.haddadi@gmail.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/12 11:44:42 by ohaddadi          #+#    #+#             */
-/*   Updated: 2022/11/05 17:23:51 by ohaddadi         ###   ########.fr       */
+/*   Created: 2022/11/29 11:36:22 by ohaddadi          #+#    #+#             */
+/*   Updated: 2022/11/29 11:36:23 by ohaddadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+
 #include "libft.h"
 
-int	ft_isalnum(int x)
+int	ft_isalnum(int i)
 {
-	if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z')
-		|| (x >= '0' && x <= '9'))
+	if (ft_isalpha(i) || ft_isdigit(i))
 		return (1);
-	else
-		return (0);
+	return (0);
 }
